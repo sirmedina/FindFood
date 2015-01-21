@@ -9,10 +9,10 @@ body{
 	display: block;
 	background: #fff;
 	text-transform: uppercase;
-	width: 50%;
+	width: 60%;
 	padding: 3%;
 	color: #333;
-	margin: 0 0 5% 25%;
+	margin: 0 0 5% 20%;
 	text-align: center;
 	border-radius: 2em;
 }
@@ -24,6 +24,9 @@ body{
 	left: 3em;
 	background: #000;
 	opacity: .1;
-	transform: rotate(25deg);
 	z-index: -1;
+	
+	-webkit-transform: rotate(25deg);
+		-ms-transform: rotate(25deg);
+			transform: rotate(25deg);
 }
