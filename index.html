@@ -7,18 +7,51 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta name="description" content="Agora ficou mais facil achar um lugar pra comer"/>
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
-		<!-- favicon -->
-			<link rel="icon" type="image/png" href="favicon.ico"/>
-			<meta name="msapplication-TileColor" content="#ff8080">
-			<meta name="msapplication-TileImage" content="files/mstile-144x144.png">
-			<meta name="application-name" content="http://ffood.com.br">
 		<!-- CSS --><link rel="stylesheet" type="text/css" href="index.css"/>
 		<!-- Personal normalize.css --><link rel="stylesheet" type="text/css" href="files/normalize.css"/>
+		<!-- jQuip --><script type="text/javascript" src="https://github.com/mythz/jquip/blob/master/src/jquip.q-min.js"></script>
+		<!-- jQuery <script src="http://code.jquery.com/jquery-1.11.2.js"></script> -->
+		<!-- jQuery Migrate --><script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+		<!-- Hammer.js --><script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+		<!-- Google Maps --><script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#to-map').click(function(){
+					$('#logo').addClass('logo-active');
+					$('.effect').addClass('effect-active');
+					$('#intro').addClass('intro-active');
+					$('header').addClass('header-active');
+				});
+				$('#go-back').click(function(){
+					$('#logo').removeClass('logo-active');
+					$('.effect').removeClass('effect-active');
+					$('#intro').removeClass('intro-active');
+					$('header').removeClass('header-active');
+				});
+			});
+		</script>
+		<script>
+			function initialize() {
+			  var mapProp = {
+			    center:new google.maps.LatLng(51.508742,-0.120850),
+			    zoom:15,
+			    mapTypeId:google.maps.MapTypeId.ROADMAP
+			  };
+			  var map=new google.maps.Map(document.getElementById("map"),mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 	</head>
 	<body>
-		<div class="effect"></div>
+		<header>
+			<a id="go-back"><</a>
+		</header>
 		<img id="logo" src="files/logo.png">
-		<a class="button" href="http://ffood.com.br">Busca padrão</a>
-		<a class="button" href="app.html">Buscar no mapa</a>
-	</body>
+		<div id="intro">
+			<a class="button" target="_blank" href="http://ffood.com.br">Busca padrão</a>
+			<a class="button" id="to-map">Buscar no mapa</a>
+			<div class="effect"></div>
+		</div>
+		<div id="map"></div>
+	</body> 
 </html>
