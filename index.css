@@ -20,10 +20,10 @@ body{
 		margin: 25% 0 30% 22.5%;
 		position: absolute;
 		z-index:99;
-			    transition: margin 1s;
-			 -o-transition: margin 1s;
-		   -moz-transition: margin 1s;
-		-webkit-transition: margin 1s;
+			    transition: margin 1s, width 1s;
+			 -o-transition: margin 1s, width 1s;
+		   -moz-transition: margin 1s, width 1s;
+		-webkit-transition: margin 1s, width 1s;
     	}
 	.logo-active{
 		margin: 3% 0 0 50% !important;
@@ -41,7 +41,7 @@ body{
 		border-radius: 2em;
 		}
 		.button:first-child{margin: 75% 0 5% 20%}
-	.effect{
+	#effect{
 		position: fixed;
 		width: 200%;
 		height: 200%;
@@ -62,11 +62,11 @@ body{
 						transition: transform 1s, top 1s;
 		}
 		.effect-active{
-			top:60%;
-			-webkit-transform: rotate(90deg);
-			   -moz-transform: rotate(90deg);
-				 -o-transform: rotate(90deg);
-					transform: rotate(90deg);
+			top:60% !important;
+			-webkit-transform: rotate(90deg) !important;
+			   -moz-transform: rotate(90deg) !important;
+				 -o-transform: rotate(90deg) !important;
+					transform: rotate(90deg) !important;
 		}
 #map{
 	width: 100%;
@@ -80,7 +80,10 @@ body{
 		background: #f88;
 		position: absolute;
 		top: 0;
-	}
+			    transition: height 1s;
+			 -o-transition: height 1s;
+		   -moz-transition: height 1s;
+		-webkit-transition: height 1s;	}
 	.header-active{height: 3em}
 	#go-back{
 		font-size:2em;

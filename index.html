@@ -18,18 +18,34 @@
 			$(document).ready(function(){
 				$('#to-map').click(function(){
 					$('#logo').addClass('logo-active');
-					$('.effect').addClass('effect-active');
+					$('#effect').addClass('effect-active');
 					$('#intro').addClass('intro-active');
 					$('header').addClass('header-active');
 				});
 				$('#go-back').click(function(){
 					$('#logo').removeClass('logo-active');
-					$('.effect').removeClass('effect-active');
+					$('#effect').removeClass('effect-active');
 					$('#intro').removeClass('intro-active');
 					$('header').removeClass('header-active');
 				});
 			});
-		</script>
+			
+			// var tomap = document.getElementById('to-map');
+			// var goback = document.getElementById('go-back');
+
+			// var logo = document.getElementById("logo");
+			// var effect = document.getElementById("effect");
+			// var intro = document.getElementById("intro");
+			// var header = document.getElementsByTagName("header");
+
+			// tomap.onclick = function() {
+			// 	logo.setAttribute("class", "logo-active");
+			// 	effect.setAttribute("class", "effect-active");
+			// 	intro.setAttribute("class", "intro-active");
+			// 	header.setAttribute("class", "header-active");
+			// }
+
+  		</script>
 		<script>
 			function initialize() {
 			  var mapProp = {
@@ -46,11 +62,11 @@
 		<header>
 			<a id="go-back"><</a>
 		</header>
-		<img id="logo" src="files/logo.png">
+		<img id="logo" src="files/logo-otm.png">
 		<div id="intro">
 			<a class="button" target="_blank" href="http://ffood.com.br">Busca padrão</a>
 			<a class="button" id="to-map">Buscar no mapa</a>
-			<div class="effect"></div>
+			<div id="effect"></div>
 		</div>
 		<div id="map"></div>
 	</body> 
